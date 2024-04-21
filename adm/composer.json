@@ -1,0 +1,20 @@
+{
+  "description": " projeto site",
+  "license": " ",
+  " proprietary" : " ",
+
+  "authors": [
+    {
+      "name": "rodrigo Santos",
+      "email": "rodrigov12.santos@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+       "App\\": "app",
+      "Core\\"  : "core"
+
+    }
+  },
+  "require": {}
+}

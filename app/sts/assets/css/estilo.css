@@ -1,0 +1,102 @@
+
+
+
+body {
+  min-height: 75rem;
+  padding-top: 3.5rem;
+}
+
+/*  formatacao do navbar*/
+.menu{
+  background-color: blueviolet;
+
+}
+
+.menu ul li a.nav-link {
+  color: #fff !important;
+}
+
+.menu ul li a.nav-link:hover {
+  color: #adaeaf !important;
+}
+
+
+
+
+
+/*  formatacao do jumbotron topo*/
+.desc-top {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  color: #fff;
+  border-radius: 0px;
+  margin-bottom: 0rem !important;
+}
+
+
+/*  formatacao do jumbotron SERVICOS*/
+.servicos {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-radius: 0px;
+  margin-bottom: 0rem !important;
+  background-color: #fff;
+}
+
+.circulo {
+  width: 140px;
+  height: 140px;
+  font-size: 52px;
+  padding-top: 24px;
+  color: #0000eb;
+}
+
+.circulo:hover {
+  background-color: #0095eb;
+  color: #fff;
+}
+
+.centralizar {
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+/*formatacao do FORMULARIO completo*/
+
+.contato {
+  border-radius: 0px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-bottom: 0rem !important;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+/*formatacao do rodape completo*/
+.rodapee {
+  border-radius: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #120b9f;
+  margin-bottom: 0rem !important;
+  color: #fff;
+}
+
+.rodapee ul li a.link-rodape {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.rodapee ul li a.link-rodape:hover {
+
+  color: #adaeaf !important;
+}
