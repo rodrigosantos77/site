@@ -7,5 +7,8 @@ if (!defined('HOTELNH')){
 }
 
 
-echo "pagina Home view <br>";
+echo "Bem Vindo Usuario" .$_SESSION['usuario_nome']."<br>";
+//botao sair
+
+echo " <a href='" .URLADM. " sair' >Sair</a>";
 

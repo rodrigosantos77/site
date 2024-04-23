@@ -64,6 +64,5 @@ class ConfigView
             echo "erro ao carregar a pagina <br>"; /* verificação da view  */
             echo "erro ao carregar a view {$this->nome}<br>"; /* verificação da view exata onde esta o erro*/
         }
-
     }
 }

@@ -24,9 +24,9 @@ class Home
 
 
 public function index(){
-
-       echo " pagina home controller<br>";
-
+//realizar o redirecionamento do acesso do usuario para a pagina home view
+               $carregarView = new \Core\ConfigView("adms/Views/home/home");
+                $carregarView->rederizar();
 }
 
 }

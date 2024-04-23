@@ -1,5 +1,7 @@
 
 <?php
+//comando para inicializar a senssao para mensagens
+    session_start();
 ob_start();
 
 define('HOTELNH',true);

@@ -18,31 +18,32 @@ class Login
 {
 
 private $dados;
+private $dadosForm;  //otimizando os dados do formulario
 
 public function index(){
 
+    //CRIANDO A FUNCAO PARA RECEBER OS DADOS VINDOS DO FORMULARIO
+    $this->dadosForm  =  filter_input_array(INPUT_POST, FILTER_DEFAULT);
+            //realizando uma verificacao vinda do banco de dados
+        if(!empty($this->dadosForm['SendLogin'])){
+           $val_Login =  new \App\adms\Models\AdmsLogin();
+           $val_Login->login($this->dadosForm);
+           //inserindo a confirmacao do usuario logado atraves do getResultado
+            if($val_Login->getResultado()){
+                //etapa que vai redirecionar o usuario a pagina de dashboard
+                    $urlDestino = URLADM ."home";
+                    header("Location: $urlDestino");
+            }else{
+                //metdo que vai pegar a posicao exata do formulario
+                $this->dados['form'] = $this->dadosForm;
+
+            }
+        }
+  //  var_dump($this->dados); //confirmacao do recebeminto de dados vindas do formulario
 
 
-   //  $this->dados = [];
-          /* RECEBENDO OS DADOS DO FORMULÁRIO DA PAGINA LOGIN PELO METODO POST */
-
-
-
-    /* REALIZANDO A VIRIFICACAO DO FORMULARIO DE LOGIN*/
-
-    $this->dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-    if(!empty($this->dados['SendLogin'] )){
-            //instanciando a classe da Models ADMSlogin//
-          $validLogin = new \App\adms\Models\AdmsLogin();
-          $validLogin->login($this->dados);
-
-    }
-
-   // var_dump($this->dados);
-
-              $carregarView = new \Core\ConfigView("adms/Views/Login/login",$this->dados);
-          $carregarView->rederizar();
+    $carregarView = new \Core\ConfigView("adms/Views/Login/login",$this->dados);
+    $carregarView->rederizar();
 
 }
-
 }

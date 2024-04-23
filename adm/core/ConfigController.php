@@ -48,6 +48,6 @@ class ConfigController
        private function config (){
 
             /*define de carregamentos de URL do projeto */
-            define('URL','http://localhost/site/adm');
+            define('URLADM','http://localhost/site/adm/');
        }
 }
